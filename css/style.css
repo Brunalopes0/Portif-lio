@@ -1,0 +1,733 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-principal: lightblue;
+    --cor-header: black;
+    --cor-txt-header: white;
+    --cor-fundo: #070707;
+    --cor-texto: #ffff;
+}
+
+body.light-mode {
+    --cor-principal: rgb(95, 150, 169);
+    --cor-header: rgb(50, 72, 79);
+    --cor-txt-header: white;
+    --cor-fundo: rgba(210, 203, 191, 0.568);
+    --cor-texto: black;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 400;
+}
+
+/* CABEÇALHO */
+header {
+    background-color: var(--cor-header);
+
+    width: 100%;
+    height: 120px;
+    margin-bottom: 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+nav {
+    /* background-color: green; */
+    width: 70%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+    gap: 15px;
+
+    list-style-type: none;
+}
+
+nav ul a {
+    display: inline-block;
+    color: var(--cor-txt-header);
+
+    font-size: 20px;
+    text-decoration: none;
+
+    transition: transform 0.3s ease;
+}
+
+nav ul a:hover {
+    transform: translateY(-3px);
+    color: var(--cor-principal);
+}
+
+header button {
+    position: static;
+
+    background-color: var(--cor-principal);
+    color: var(--cor-fundo);
+    border: none;
+
+    padding: 5px 10px;
+    font-size: 12px;
+
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 600;
+    border-radius: 20px;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+header button:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+/* MAIN */
+main {
+    /* background-color: purple; */
+    width: 95%;
+    height: auto;
+
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+    gap: 35px;
+}
+
+/* HOME */
+#home {
+    /* background-color: blue; */
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+}
+
+#txt-contatos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    flex-direction: column;
+}
+
+.txt-home {
+    width: 70%;
+    /* background-color: red; */
+}
+
+.txt-home h1 {
+    font-size: clamp(32px, 8vw, 60px);
+    color: var(--cor-principal);
+}
+
+.txt-home p {
+    font-size: clamp(14px, 3vw, 22px);
+}
+
+.txt-home p span {
+    color: var(--cor-principal);
+}
+
+#links-home {
+    /* background-color: lightblue; */
+    margin-top: 10px;
+}
+
+#links-home ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+
+    gap: 15px;
+
+    list-style-type: none;
+}
+
+#links-home ul li a img {
+    width: 30px;
+    height: 30px;
+
+    object-fit: cover;
+    border-radius: 15px;
+
+    transition: transform 0.3s ease;
+}
+
+#links-home ul li a img:hover {
+
+    transform: translateY(-3px);
+}
+
+/* FOTO MINHA HOME */
+#img-home {
+    margin: 10px auto auto;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+}
+
+#img-home img {
+    margin: auto;
+    width: 100%;
+
+    object-fit: cover;
+    border-radius: 550px;
+
+    transition: transform 0.3s ease;
+}
+
+#img-home img:hover {
+    transform: translateY(-2px);
+}
+
+/* PROJETOS */
+#projetos {
+    /* background-color: pink; */
+    width: 100%;
+    height: auto;
+    margin-top: 40px;
+}
+
+#titulo-projetos {
+    /* background-color: green; */
+
+    width: 50%;
+    margin: auto;
+    padding: 10px;
+}
+
+#titulo-projetos h1 {
+    color: var(--cor-principal);
+    text-align: center;
+    font-size: 30px;
+}
+
+/* Cards projetos */
+#cards-projetos {
+    /* background-color: blue; */
+
+    width: 90%;
+    height: auto;
+
+    margin: auto;
+    margin-bottom: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    margin-top: 10px;
+
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.projeto-card {
+    width: 280px;
+    background-color: rgba(21, 21, 37, 0.862);
+
+    padding: 16px;
+    border-radius: 12px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    box-sizing: border-box;
+}
+
+.projeto-card:hover {
+    transform: translatey(-5px);
+}
+
+.projeto-card img {
+    width: 100% !important;
+    height: 160px !important;
+
+    object-fit: cover;
+    object-position: top center;
+
+    border-radius: 8px;
+    margin-bottom: 12px;
+
+    flex-shrink: 0;
+}
+
+
+.txt-projetos-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+
+    width: 100%;
+    height: auto;
+    padding: 12px;
+    box-sizing: border-box;
+
+    /* background-color: #1b1b2f; */
+    color: var(--cor-texto);
+    border-radius: 0 0 10px 10px;
+}
+
+.txt-projetos-card p {
+    color: var(--cor-texto);
+    font-size: 13px;
+    line-height: 1.4;
+    margin: 6px 0 0;
+}
+
+.projeto-card ul {
+    /* background-color: brown; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+
+    gap: 30px;
+    list-style: none;
+}
+
+.projeto-card ul li a {
+    color: var(--cor-principal);
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.projeto-card ul li a:hover {
+    font-size: 16px;
+    color: lightblue;
+}
+
+/* HABILIDADES */
+#habilidades {
+    /* background-color: steelblue; */
+
+    width: 100%;
+    height: auto;
+
+    margin-bottom: 12px;
+}
+
+#titulo-habilidades {
+    /* background-color: palevioletred; */
+
+    width: 60%;
+    margin: auto;
+    margin-bottom: 10px;
+
+    text-align: center;
+}
+
+#titulo-habilidades h1 {
+    color: var(--cor-principal);
+    font-size: 35px;
+}
+
+.logos-linguagens {
+    /* background-color: seagreen; */
+
+    max-width: 90%;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: auto;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.linguagem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 30%;
+    height: auto;
+
+    /* background-color: red; */
+    transition: transform 0.3s ease;
+}
+
+.linguagem:hover {
+    transform: translatey(-3px);
+}
+
+.linguagem img {
+    max-width: 80px;
+    height: 90px;
+    object-fit: cover;
+}
+
+/* SOBRE MIM */
+#sobre_mim {
+    /* background-color: violet; */
+
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
+}
+
+#titulo-sobre {
+    /* background-color: lawngreen; */
+    width: 70%;
+    margin: auto;
+    text-align: center;
+}
+
+#titulo-sobre h1 {
+    color: var(--cor-principal);
+    font-size: 40px;
+}
+
+/* SOBRE MIM */
+#sobre {
+    /* background-color: tomato; */
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+    gap: 10px;
+}
+
+#txt-sobre {
+    width: 85%;
+    padding: 5px;
+    margin: auto;
+    /* background-color: lightpink; */
+}
+
+#txt-sobre p {
+    font-size: 18px;
+}
+
+#sobre-img {
+    /* background-color: white; */
+    max-width: 300px;
+    height: 320px;
+    margin: auto;
+}
+
+#sobre-img img {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    object-fit: cover;
+    border-radius: 35px;
+}
+
+/* RODAPE */
+footer {
+    background-color: rgb(50, 96, 111);
+
+    width: 100%;
+    height: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 15px;
+}
+
+footer p {
+    font-size: 15px;
+    margin: auto;
+}
+
+
+@media (min-width: 620px) and (max-width: 1059px) {
+
+    main {
+        width: 90%;
+    }
+
+    /* CABEÇALHO */
+
+    nav {
+        width: 95%;
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 30px;
+    }
+
+    nav ul {
+        flex-direction: row;
+        gap: 25px;
+    }
+
+    header button {
+        right: 15px;
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+
+    /* HOME */
+
+    #home {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    #txt-contatos {
+        width: 55%;
+    }
+
+    .txt-home {
+        width: 100%;
+        text-align: left;
+    }
+
+    .txt-home h1 {
+        font-size: clamp(40px, 5vw, 55px);
+    }
+
+    .txt-home p {
+        font-size: 20px;
+    }
+
+    #links-home ul {
+        gap: 30px;
+    }
+
+    /* FOTO HOME */
+
+    #img-home {
+        width: 40%;
+        max-width: 320px;
+        flex-shrink: 0;
+    }
+
+    /* PROJETOS */
+
+    .projeto-card {
+        width: 240px;
+        min-height: 260px;
+    }
+
+    .projeto-card img {
+        width: 95%;
+        height: 160px;
+    }
+
+    /* SOBRE MIM */
+
+    #sobre {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    #txt-sobre {
+        width: 60%;
+        padding: 15px;
+    }
+
+    #txt-sobre p {
+        font-size: 19px;
+    }
+
+    #sobre-img {
+        width: 35%;
+        max-width: 350px;
+        flex-shrink: 0;
+    }
+}
+
+/* DESKTOP */
+
+@media (min-width: 1060px) {
+
+    main {
+        width: 90%;
+        max-width: 1400px;
+        gap: 100px;
+    }
+
+    /* CABEÇALHO */
+
+    nav {
+        width: 100%;
+
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 30px;
+    }
+
+    nav ul {
+        flex-direction: row;
+        gap: 25px;
+    }
+
+
+    header button {
+        right: 2%;
+        padding: 7px 14px;
+        font-size: 14px;
+    }
+
+    nav ul {
+        flex-direction: row;
+        gap: 40px;
+    }
+
+    nav ul li a {
+        font-size: 23px;
+    }
+
+    /* HOME */
+
+    #home {
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    #txt-contatos {
+        width: 55%;
+    }
+
+    .txt-home {
+        width: 100%;
+        margin: 0;
+        text-align: left;
+    }
+
+    .txt-home h1 {
+        font-size: 60px;
+    }
+
+    .txt-home p {
+        font-size: 25px;
+    }
+
+    #links-home ul {
+        gap: 30px;
+    }
+
+    /* FOTO HOME */
+
+    #img-home {
+        width: 40%;
+        max-width: 400px;
+        flex-shrink: 0;
+    }
+
+    /* PROJETOS */
+    #projetos {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    #titulo-projetos h1 {
+        font-size: 50px;
+    }
+
+    #cards-projetos {
+        gap: 30px;
+        margin-top: 70px;
+        /* background-color: red; */
+    }
+
+    .projeto-card {
+        /* background-color: blue; */
+        width: 340px;
+        min-height: 360px;
+    }
+
+    .txt-projetos-card p {
+        font-size: 20px;
+    }
+
+    .projeto-card img {
+        width: 95%;
+        height: 260px;
+    }
+
+    /* HABILIDADES */
+
+    #habilidades {
+        margin-top: 70px;
+    }
+
+    #titulo-habilidades h1 {
+        font-size: 50px;
+    }
+
+    /* SOBRE MIM */
+    #sobre_mim {
+        margin-top: 80px;
+        margin-bottom: 80px;
+    }
+
+    #sobre {
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    #titulo-sobre h1 {
+        font-size: 50px;
+    }
+
+    #txt-sobre {
+        width: 65%;
+        padding: 15px;
+    }
+
+    #txt-sobre p {
+        font-size: 25px;
+    }
+
+    #sobre-img {
+        width: 30%;
+        max-width: 350px;
+        flex-shrink: 0;
+    }
+}
