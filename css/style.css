@@ -7,19 +7,21 @@
 }
 
 :root {
-    --cor-principal: lightblue;
+    --cor-principal: rgb(151, 225, 250);
     --cor-header: black;
     --cor-txt-header: white;
     --cor-fundo: #070707;
     --cor-texto: #ffff;
+    --cor-cards-projeto:rgba(21, 21, 37, 0.862);
 }
 
 body.light-mode {
-    --cor-principal: rgb(95, 150, 169);
-    --cor-header: rgb(50, 72, 79);
+    --cor-principal: rgb(39, 71, 82);
+    --cor-header: rgb(20, 35, 40);
     --cor-txt-header: white;
     --cor-fundo: rgba(210, 203, 191, 0.568);
     --cor-texto: black;
+    --cor-cards-projeto:  rgb(101, 133, 144);
 }
 
 html {
@@ -258,7 +260,7 @@ main {
 
 .projeto-card {
     width: 280px;
-    background-color: rgba(21, 21, 37, 0.862);
+    background-color: var(--cor-cards-projeto);
 
     padding: 16px;
     border-radius: 12px;
@@ -327,7 +329,7 @@ main {
 }
 
 .projeto-card ul li a {
-    color: var(--cor-principal);
+    color: var(--cor-texto);
     text-decoration: none;
     font-size: 15px;
     transition: 0.3s;
@@ -353,7 +355,7 @@ main {
 
     width: 60%;
     margin: auto;
-    margin-bottom: 10px;
+    margin-bottom: 40px;
 
     text-align: center;
 }
@@ -383,10 +385,11 @@ main {
     justify-content: center;
     align-items: center;
 
-    width: 30%;
-    height: auto;
+    width: 90px;
+    height: 90px;
 
-    /* background-color: red; */
+    background-color: var(--cor-principal);
+    border-radius: 70px;
     transition: transform 0.3s ease;
 }
 
@@ -395,8 +398,9 @@ main {
 }
 
 .linguagem img {
-    max-width: 80px;
-    height: 90px;
+    max-width: 70px;
+    height: 80px;
+    border-radius: 60px;
     object-fit: cover;
 }
 
@@ -559,6 +563,24 @@ footer p {
         height: 160px;
     }
 
+    .linguagem {
+        width: 120px;
+        height: 110px;
+
+        background-color: var(--cor-principal);
+        border-radius: 70px;
+        transition: transform 0.3s ease;
+    }
+
+    .linguagem img {
+        border-radius: 40px;
+        width: 120px;
+        max-width: none;
+        height: 80px;
+        object-fit: contain;
+    }
+
+
     /* SOBRE MIM */
 
     #sobre {
@@ -695,6 +717,23 @@ footer p {
 
     #habilidades {
         margin-top: 70px;
+    }
+
+    .linguagem {
+        width: 120px;
+        height: 120px;
+
+        background-color: var(--cor-principal);
+        border-radius: 90px;
+        transition: transform 0.3s ease;
+    }
+
+    .linguagem img {
+        border-radius: 40px;
+        width: 120px;
+        max-width: none;
+        height: 90px;
+        object-fit: contain;
     }
 
     #titulo-habilidades h1 {
