@@ -8,20 +8,22 @@
 
 :root {
     --cor-principal: rgb(151, 225, 250);
+    --cor-transicicao-links: rgb(103, 215, 252);
     --cor-header: black;
     --cor-txt-header: white;
     --cor-fundo: #070707;
     --cor-texto: #ffff;
-    --cor-cards-projeto:rgba(21, 21, 37, 0.862);
+    --cor-cards-projeto: rgba(21, 21, 37, 0.862);
 }
 
 body.light-mode {
     --cor-principal: rgb(39, 71, 82);
+    --cor-transicicao-links: rgb(112, 217, 249);
     --cor-header: rgb(20, 35, 40);
     --cor-txt-header: white;
     --cor-fundo: rgba(210, 203, 191, 0.568);
     --cor-texto: black;
-    --cor-cards-projeto:  rgb(101, 133, 144);
+    --cor-cards-projeto: rgb(101, 133, 144);
 }
 
 html {
@@ -83,7 +85,7 @@ nav ul a {
 
 nav ul a:hover {
     transform: translateY(-3px);
-    color: var(--cor-principal);
+    color: var(--cor-transicicao-links);
 }
 
 header button {
